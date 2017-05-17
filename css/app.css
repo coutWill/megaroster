@@ -5,8 +5,14 @@
 .student {
   border: 1px solid #ddd;
   height: 4rem;
+  position: relative;
 }
 
 .actions {
   float: right;
+}
+
+.promote{
+  background-color: green;
+  border-color: white;
 }

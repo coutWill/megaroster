@@ -20,7 +20,12 @@ const megaroster = {
     btn.closest('.student').remove()
 
     // Remove it from the this.students array
-    // this.students.splice(?, 1)
+     this.students.splice(btn, 1)
+  },
+
+  promoteStudent(ev){
+    const btn = ev.target
+    btn.closest('.student').style.borderColor = "red"
   },
 
   addStudent(ev) {
@@ -53,6 +58,9 @@ const megaroster = {
     li
       .querySelector('button.remove')
       .addEventListener('click', this.removeStudent.bind(this))
+    li
+      .querySelector('button.promote')
+      .addEventListener('click', this.promoteStudent.bind(this))
     return li
   },
 
